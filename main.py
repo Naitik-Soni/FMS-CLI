@@ -14,21 +14,21 @@ def main_operator():
             elif command[0].lower() == "clear": #
                 ops.clear()
             elif command[0].lower() == "cd": #
-                ops.change_directory(command[1].lower())
+                ops.change_directory(" ".join(command[1:]).lower())
             elif command[0].lower() == "cdir": #
-                ops.create_directory(command[1])
+                ops.create_directory(" ".join(command[1:]))
             elif command[0].lower() == "ddir": #
-                ops.delete_directory(command[1])
+                ops.delete_directory(" ".join(command[1:]))
             elif command[0].lower() == "cfile": #
-                ops.create_file(command[1])
+                ops.create_file(" ".join(command[1:]))
             elif command[0].lower() == "dfile": #
-                ops.delete_file(command[1])
+                ops.delete_file(" ".join(command[1:]))
             elif command[0].lower() == "fstat": #
                 ops.meta_data()
             elif command[0].lower() == "find": #
-                ops.find_file(command[1])
+                ops.find_file(" ".join(command[1:]))
             elif command[0].lower() == "dis": #
-                ops.display_content(command[1])
+                ops.display_content(" ".join(command[1:]))
             elif command[0].lower() == "copy": #
                 ops.copy_file_content(command[1], command[2])
             elif command[0].lower() == "write": #
