@@ -1,3 +1,5 @@
 import os
 
-obj = os.system('start cmd.exe /k python C://Users//naiti//OneDrive//Desktop//"FMS CLI"/main.py')
+path = os.getcwd()
+
+obj = os.system(f'start cmd.exe /k python "{path}\main.py"')
